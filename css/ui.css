@@ -3,8 +3,7 @@
  *
  */
 
-/* Extra small devices (phones, up to 480px) */
-
+/* Default Styles */
 .tile { 
 	margin: 0 10px 10px 0;
 	float: left;
@@ -20,79 +19,97 @@
 	height: 60px;
 }
 
-
-.t-1 { 
-	width: 100px;
-	height: 100px;
-}
-
-.t-2 { 
-	width: 210px;
-	height: 100px;
-}
-
 .effect:hover { -webkit-box-shadow:0 0 40px #c4cecb; cursor: pointer; }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) {
-	.tile { clear: both; }
-	
-	.t-1 { 
-		width: 150px;
-		height: 150px;
-	}
 
-	.t-2 { 
-		width: 310px;
-		height: 150px;
-	}
+
+/* Extra small devices (phones, up to 480px) */
+.t-xm-1 { 
+width: 135px;
+height: 135px;
 }
 
+.t-xm-2 { 
+	width: 280px;
+	height: 135px;
+}
+
+.alpha-xm {
+margin: 0 0 10px 0;
+height: 63px;
+}
+
+.omega-xm {
+	margin: 0;
+	height: 62px;
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+.t-sm-1 { 
+width: 230px;
+height: 230px;
+}
+
+.t-sm-2 { 
+	width: 470px;
+	height: 230px;
+}
+
+.alpha-sm {
+margin: 0 0 10px 0;
+height: 110px;
+}
+
+.omega-sm {
+	margin: 0;
+	height: 110px;
+}
+
+
+
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199px) {
-	.t-1 { 
-	width: 370px;
-	height: 370px;
-	}
+.t-md-1 { 
+width: 303px;
+height: 303px;
+}
 
-	.t-2 { 
-		width: 750px;
-		height: 370px;
-	}
+.t-md-2 { 
+	width: 616px;
+	height: 303px;
+}
 
-	.alpha {
-	margin: 0 0 10px 0;
-	height: 180px;
-	}
+.alpha-md {
+margin: 0 0 10px 0;
+height: 147px;
+}
 
-	.omega {
-		margin: 0;
-		height: 180px;
-	}
+.omega-md {
+	margin: 0;
+	height: 146px;
 }
 
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-	.t-1 { 
-	width: 370px;
+.t-lg-1 { 
+width: 370px;
+height: 370px;
+}
+
+.t-lg-2 { 
+	width: 750px;
 	height: 370px;
-	}
+}
 
-	.t-2 { 
-		width: 750px;
-		height: 370px;
-	}
+.alpha-lg {
+margin: 0 0 10px 0;
+height: 180px;
+}
 
-	.alpha {
-	margin: 0 0 10px 0;
+.omega-lg {
+	margin: 0;
 	height: 180px;
-	}
-
-	.omega {
-		margin: 0;
-		height: 180px;
-	}
 }
 
 
