@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/ui.css">
+	<link rel="stylesheet" type="text/css" href="css/debug.css">
 
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
@@ -63,7 +64,6 @@
 				</div>
 
 
-				<!-- Tile UI Large -->
 				<!-- Tile UI Extra Small -->
 				<div class="col-md-12">
 					<h1>Extra Small</h1>
@@ -83,6 +83,22 @@
 					<div class="tile t-2 royal-blue effect">12</div>
 				</div>
 				<hr/>
+
+
+				<div class="col-md-12">
+					<h1 id="pane-head">Debug Pane</h1>
+				</div>
+				<div id="debug" class="container col-md-12">
+					<label for="window-size">Window Size</label>
+					<input id="window-size" name="window-size" type="text" value="0"/>	
+
+					<br/>
+
+					<label for="container-size">Container Size</label>
+					<input id="container-size" name="container-size" type="text" value="0"/>
+				</div>
+				<hr/>
+
 
 			</div>
 		</div>
@@ -117,6 +133,22 @@
 			</div>
 		</div>
 	</section>
+
+
+
+	<!-- Debug Scripts -->
+	<script type="text/javascript">
+		function get_width(id){
+			return $(id).width();
+		}
+
+		function debug_pane(){
+			$("#window-size").val( $(window).width() );
+			$("#container-size").val( get_width("#pane-head") );
+		}
+
+		$(window).bind("resize", debug_pane);
+	</script>
 
 </body>
 </html>
