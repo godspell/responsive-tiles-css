@@ -1,3 +1,4 @@
 /* Debug Css */
 
+label { display: block; }
 label:hover { cursor: pointer; }
