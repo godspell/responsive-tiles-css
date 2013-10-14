@@ -23,95 +23,28 @@
 
 
 
-/* Extra small devices (phones, up to 480px) */
-.t-xm-1 { 
-width: 135px;
-height: 135px;
+
+
+/* iPhone Vertical (320px) */
+.t-1 { 
+width: 128px;
+height: 128px;
 }
 
-.t-xm-2 { 
-	width: 280px;
-	height: 135px;
+.t-2 { 
+	width: 266px;
+	height: 128px;
 }
 
-.alpha-xm {
-margin: 0 0 10px 0;
-height: 63px;
+.alpha {
+	margin: 0 0 10px 0;
+	height: 64px;
 }
 
-.omega-xm {
+.omega {
 	margin: 0;
-	height: 62px;
+	height: 64px;
 }
-
-
-
-/* Small devices (tablets, 768px and up) */
-.t-sm-1 { 
-width: 230px;
-height: 230px;
-}
-
-.t-sm-2 { 
-	width: 470px;
-	height: 230px;
-}
-
-.alpha-sm {
-margin: 0 0 10px 0;
-height: 110px;
-}
-
-.omega-sm {
-	margin: 0;
-	height: 110px;
-}
-
-
-
-/* Medium devices (desktops, 992px and up) */
-.t-md-1 { 
-width: 303px;
-height: 303px;
-}
-
-.t-md-2 { 
-	width: 616px;
-	height: 303px;
-}
-
-.alpha-md {
-margin: 0 0 10px 0;
-height: 147px;
-}
-
-.omega-md {
-	margin: 0;
-	height: 146px;
-}
-
-
-/* Large devices (large desktops, 1200px and up) */
-.t-lg-1 { 
-width: 370px;
-height: 370px;
-}
-
-.t-lg-2 { 
-	width: 750px;
-	height: 370px;
-}
-
-.alpha-lg {
-margin: 0 0 10px 0;
-height: 180px;
-}
-
-.omega-lg {
-	margin: 0;
-	height: 180px;
-}
-
 
 
 

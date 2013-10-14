@@ -62,14 +62,6 @@ nav ul li a {
 /*******************************************/
 /* Slidable section styles (non-important) */
 /*******************************************/
-section#home{
-	background-color: black;
-}
-
-section#ebook{
-	background-color: black;
-}
-
-section#services {
+section{
 	background-color: black;
 }
