@@ -24,17 +24,28 @@
 .effect:hover { -webkit-box-shadow:0 0 40px #dedad8; cursor: pointer; }
 
 
+
+/*===================================================================*/
+/* Mobile Styles */
+/*===================================================================*/
+@media (max-width: 767px) {
+	.tile {
+		float: none;
+		margin: 0 auto 10px auto;
+	}
+}
+
+
 /*===================================================================*/
 /* iPhone Vertical Scaling Container */
 /*===================================================================*/
-/* 1 Tile (320px Window Width) 290px Container */
+/* 1 col (320px Window Width) 290px Container */
 @media (max-width: 479px) { 
 	.t-1 { 
 		width: 280px;
 		height: 280px;
 	}
 
-	/* Should Not Be used at this level*/
 	.t-2 { 
 		width: 570px;
 		height: 280px;
@@ -52,81 +63,32 @@
 }
 
 
-/* 2 Tile (320px Window Width) 290px Container */
-/*@media (max-width: 479px) { 
-	.t-1 { 
-		width: 135px;
-		height: 135px;
-	}
-
-	.t-2 { 
-		width: 280px;
-		height: 135px;
-	}
-
-	.alpha {
-		margin: 0 0 10px 0;
-		height: 63px;
-	}
-
-	.omega {
-		margin: 0;
-		height: 61px;
-	}
-}*/
-
-
-
-
 
 /*===================================================================*/
 /* iPhone4 Horizontal Scaling Container */ 
 /*===================================================================*/
-/* 2 Tile */
+/* 1 col */
 @media (min-width: 480px) and (max-width: 567px) { 
 	.t-1 { 
-		width: 215px;
-		height: 215px;
+		width: 320px;
+		height: 320px;
 	}
 
 	.t-2 { 
-		width: 440px;
-		height: 215px;
+		width: 650px;
+		height: 320px;
 	}
 
 	.alpha {
 		margin: 0 0 10px 0;
-		height: 103px;
+		height: 155px;
 	}
 
 	.omega {
 		margin: 0;
-		height: 101px;
+		height: 155px;
 	}
 }
-
-/* 3 Tile */ 
-/*@media (min-width: 480px) and (max-width: 567px) { 
-	.t-1 { 
-		width: 140px;
-		height: 140px;
-	}
-
-	.t-2 { 
-		width: 290px;
-		height: 140px;
-	}
-
-	.alpha {
-		margin: 0 0 10px 0;
-		height: 65px;
-	}
-
-	.omega {
-		margin: 0;
-		height: 65px;
-	}
-}*/
 
 
 
@@ -134,75 +96,28 @@
 /*===================================================================*/
 /* iPhone5 Horizontal Scaling Container */
 /*===================================================================*/
-/* Large (1 cols) */
-/*@media (min-width: 568px) and (max-width: 767px) {
-	.t-1 { 
-		width: 538px;
-		height: 538px;
-	}
-
-	.t-2 { 
-		width: 1066px;
-		height: 538px;
-	}
-
-	.alpha {
-		margin: 0 0 10px 0;
-		height: 264px;
-	}
-
-	.omega {
-		margin: 0;
-		height: 264px;
-	}	
-}*/
-
-/* Medium (2 cols) */
+/* 1 col */
 @media (min-width: 568px) and (max-width: 767px) {
 	.t-1 { 
-		width: 259px;
-		height: 259px;
+		width: 390px;
+		height: 390px;
 	}
 
 	.t-2 { 
-		width: 528px;
-		height: 259px;
+		width: 790px;
+		height: 390px;
 	}
 
 	.alpha {
 		margin: 0 0 10px 0;
-		height: 125px;
+		height: 190px;
 	}
 
 	.omega {
 		margin: 0;
-		height: 123px;
+		height: 190px;
 	}	
 }
-
-/* Small (3 cols) */
-/*@media (min-width: 568px) and (max-width: 767px) {
-	.t-1 { 
-		width: 169px;
-		height: 169px;
-	}
-
-	.t-2 { 
-		width: 348px;
-		height: 169px;
-	}
-
-	.alpha {
-		margin: 0 0 10px 0;
-		height: 80px;
-	}
-
-	.omega {
-		margin: 0;
-		height: 78px;
-	}
-}*/
-
 
 
 
@@ -474,107 +389,12 @@
 
 
 
+/*===================================================================*/
+/* Hover Effects */
+/*===================================================================*/
 
 
-/** Misc Colors **/
-.blue {
-	background-color: #009fb2;
-	background-image: -o-linear-gradient(left , #00839a 0%, #00a1b3 100%);
-	background-image: -moz-linear-gradient(left , #00839a 0%, #00a1b3 100%);
-	background-image: -webkit-linear-gradient(left , #00839a 0%, #00a1b3 100%);
-	background-image: -ms-linear-gradient(left , #00839a 0%, #00a1b3 100%);
-	background-image: linear-gradient(left , #00839a 0%, #00a1b3 100%);
 
-	background-image: -webkit-gradient(
-	           linear,
-	            left top,
-	            right top,
-	            color-stop(0, #00839a),
-	            color-stop(1, #00a1b3)
-	        );
-	-webkit-box-shadow: 1px 0 1px #065363;
-	-moz-box-shadow: 1px 0 1px #065363;
-	-ms-box-shadow: 1px 0 1px #065363;
-	-o-box-shadow: 1px 0 1px #065363;
-	box-shadow: 1px 0 1px #065363; }  
-.red {
-	background-color: #d5582c;
-	background-image: -o-linear-gradient(left , #c64a26 0%, #d5582c 100%);
-	background-image: -moz-linear-gradient(left , #c64a26 0%, #d5582c 100%);
-	background-image: -webkit-linear-gradient(left , #c64a26 0%, #d5582c 100%);
-	background-image: -ms-linear-gradient(left , #c64a26 0%, #d5582c 100%);
-	background-image: linear-gradient(left , #c64a26 0%, #d5582c 100%);
 
-	background-image: -webkit-gradient(
-	           linear,
-	            left top,
-	            right top,
-	            color-stop(0, #c64a26),
-	            color-stop(1, #d5582c)
-	        );
-	-webkit-box-shadow: 1px 0 1px #b84a23;
-	-moz-box-shadow: 1px 0 1px #b84a23;
-	-ms-box-shadow: 1px 0 1px #b84a23;
-	-o-box-shadow: 1px 0 1px #b84a23;
-	box-shadow: 1px 0 1px #b84a23; }      
-.green {
-	background: #8BBA30;
-	background-image: -o-linear-gradient(left , #84a12d 0%, #9eb33a 100%);
-	background-image: -moz-linear-gradient(left , #84a12d 0%, #9eb33a 100%);
-	background-image: -webkit-linear-gradient(left , #84a12d 0%, #9eb33a 100%);
-	background-image: -ms-linear-gradient(left , #84a12d 0%, #9eb33a 100%);
-	background-image: linear-gradient(left , #84a12d 0%, #9eb33a 100%);
 
-	background-image: -webkit-gradient(
-	       linear,
-	        left top,
-	        right top,
-	        color-stop(0, #84a12d),
-	        color-stop(1, #9eb33a)
-	    );
-	-webkit-box-shadow: 1px 0 1px #8ca731;
-	-moz-box-shadow: 1px 0 1px #8ca731;
-	-ms-box-shadow: 1px 0 1px #8ca731;
-	-o-box-shadow: 1px 0 1px #8ca731;
-	box-shadow: 1px 0 1px #8ca731; }
-.royal-blue {
-	background:#385E82;
-	background-image: -o-linear-gradient(left , #29527b 0%, #014e93 100%);
-	background-image: -moz-linear-gradient(left , #29527b 0%, #014e93 100%);
-	background-image: -webkit-linear-gradient(left , #29527b 0%, #014e93 100%);
-	background-image: -ms-linear-gradient(left , #29527b 0%, #014e93 100%);
-	background-image: linear-gradient(left , #29527b 0%, #014e93 100%);
 
-	background-image: -webkit-gradient(
-	           linear,
-	            left top,
-	            right top,
-	            color-stop(0, #29527b),
-	            color-stop(1, #014e93)
-	        );
-	-webkit-box-shadow: 1px 0 1px #004884;
-	-moz-box-shadow: 1px 0 1px #004884;
-	-ms-box-shadow: 1px 0 1px #004884;
-	-o-box-shadow: 1px 0 1px #004884;
-	box-shadow: 1px 0 1px #004884; }  
-.orange {
-	background:#F2854C;
-
-	background-image: -o-linear-gradient(left , #dc7c26 0%, #e4a11e 100%);
-	background-image: -moz-linear-gradient(left , #dc7c26 0%, #e4a11e 100%);
-	background-image: -webkit-linear-gradient(left , #dc7c26 0%, #e4a11e 100%);
-	background-image: -ms-linear-gradient(left , #dc7c26 0%, #e4a11e 100%);
-	background-image: linear-gradient(left , #dc7c26 0%, #e4a11e 100%);
-
-	background-image: -webkit-gradient(
-	           linear,
-	            left top,
-	            right top,
-	            color-stop(0, #dc7c26),
-	            color-stop(1, #e4a11e)
-	        );
-	-webkit-box-shadow: 1px 0 1px #dc7c26;
-	-moz-box-shadow: 1px 0 1px #dc7c26;
-	-ms-box-shadow: 1px 0 1px #dc7c26;
-	-o-box-shadow: 1px 0 1px #dc7c26;
-	box-shadow: 1px 0 1px #dc7c26; }    
