@@ -64,26 +64,40 @@
 				</div>
 
 
-				<!-- Tile UI Extra Small -->
+
+
+				<!-- Windows Ui -->
 				<div id="case" class="container col-md-12">
-					<div class="tile t-2 red effect">1</div>
-					<div class="tile t-1 blue effect">2</div>
-					<div class="tile t-1 green effect">3</div>
-					<div class="tile t-1 orange effect">4</div>
-					<div class="tile t-2 royal-blue effect">5</div>
-					<div class="tile t-1 orange effect">6</div>
-					<div class="tile t-1 blue effect">7</div>
-					<div class="tile t-2 red effect">8</div>
-					<div class="tile t-2 green effect">9</div>
-					<div class="tile t-1 orange effect">10</div>
+					<!-- row 1 -->
 					<div class="tile t-1">
-						<div class="alpha blue effect">11</div>
-						<div class="omega orange effect"></div>
+						<div class="alpha effect">
+							<img src="img/1.png">
+						</div>
+						<div class="omega effect">
+							<img src="img/2.png">
+						</div>
 					</div>
-					<div class="tile t-2 royal-blue effect">12</div>
+					<div class="tile t-1 effect">
+						<img src="img/3.png">
+					</div>
+					<div class="tile t-1 effect">
+						<img src="img/4.png">
+					</div>
+
+					<!-- row 2 -->
 					<div class="tile t-1">
-						<div class="alpha red effect">13</div>
-						<div class="omega green effect"></div>
+						<div class="alpha effect">
+							<img src="img/5.png">
+						</div>
+						<div class="omega effect">
+							<img src="img/6.png">
+						</div>
+					</div>
+					<div class="tile t-1 effect">
+						<img src="img/7.png">
+					</div>
+					<div class="tile t-1 effect">
+						<img src="img/8.png">
 					</div>
 				</div>
 				<hr/>
@@ -155,6 +169,7 @@
 			$("#container-size").val( get_width("#pane-head") );
 		}
 
+		$(window).ready(function(){debug_pane();});
 		$(window).bind("resize", debug_pane);
 	</script>
 

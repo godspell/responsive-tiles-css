@@ -9,6 +9,8 @@
 	float: left;
 }
 
+.tile img { width: 100%; }
+
 .alpha {
 	margin: 0 0 10px 0;
 	height: 60px;
@@ -19,14 +21,39 @@
 	height: 60px;
 }
 
-.effect:hover { -webkit-box-shadow:0 0 40px #c4cecb; cursor: pointer; }
+.effect:hover { -webkit-box-shadow:0 0 40px #dedad8; cursor: pointer; }
 
 
 /*===================================================================*/
 /* iPhone Vertical Scaling Container */
 /*===================================================================*/
-/* 2 Tile (320px) DEFALUT */
+/* 1 Tile (320px Window Width) 290px Container */
 @media (max-width: 479px) { 
+	.t-1 { 
+		width: 280px;
+		height: 280px;
+	}
+
+	/* Should Not Be used at this level*/
+	.t-2 { 
+		width: 570px;
+		height: 280px;
+	}
+
+	.alpha {
+		margin: 0 0 10px 0;
+		height: 135px;
+	}
+
+	.omega {
+		margin: 0;
+		height: 135px;
+	}
+}
+
+
+/* 2 Tile (320px Window Width) 290px Container */
+/*@media (max-width: 479px) { 
 	.t-1 { 
 		width: 135px;
 		height: 135px;
@@ -46,7 +73,7 @@
 		margin: 0;
 		height: 61px;
 	}
-}
+}*/
 
 
 
@@ -56,7 +83,7 @@
 /* iPhone4 Horizontal Scaling Container */ 
 /*===================================================================*/
 /* 2 Tile */
-/*@media (min-width: 480px) and (max-width: 567px) { 
+@media (min-width: 480px) and (max-width: 567px) { 
 	.t-1 { 
 		width: 215px;
 		height: 215px;
@@ -76,10 +103,10 @@
 		margin: 0;
 		height: 101px;
 	}
-}*/
+}
 
 /* 3 Tile */ 
-@media (min-width: 480px) and (max-width: 567px) { 
+/*@media (min-width: 480px) and (max-width: 567px) { 
 	.t-1 { 
 		width: 140px;
 		height: 140px;
@@ -99,7 +126,7 @@
 		margin: 0;
 		height: 65px;
 	}
-}
+}*/
 
 
 
@@ -107,8 +134,31 @@
 /*===================================================================*/
 /* iPhone5 Horizontal Scaling Container */
 /*===================================================================*/
-/* 2 Tile */
+/* Large (1 cols) */
 /*@media (min-width: 568px) and (max-width: 767px) {
+	.t-1 { 
+		width: 538px;
+		height: 538px;
+	}
+
+	.t-2 { 
+		width: 1066px;
+		height: 538px;
+	}
+
+	.alpha {
+		margin: 0 0 10px 0;
+		height: 264px;
+	}
+
+	.omega {
+		margin: 0;
+		height: 264px;
+	}	
+}*/
+
+/* Medium (2 cols) */
+@media (min-width: 568px) and (max-width: 767px) {
 	.t-1 { 
 		width: 259px;
 		height: 259px;
@@ -128,10 +178,10 @@
 		margin: 0;
 		height: 123px;
 	}	
-}*/
+}
 
-/* 3 Tile */
-@media (min-width: 568px) and (max-width: 767px) {
+/* Small (3 cols) */
+/*@media (min-width: 568px) and (max-width: 767px) {
 	.t-1 { 
 		width: 169px;
 		height: 169px;
@@ -151,7 +201,7 @@
 		margin: 0;
 		height: 78px;
 	}
-}
+}*/
 
 
 
@@ -160,8 +210,31 @@
 /*===================================================================*/
 /* Small devices (tablets) 720px Container */
 /*===================================================================*/
-/* 3 Tiles */
+/* Large (2 cols) */
 /*@media (min-width: 768px) and (max-width: 991px) {
+	.t-1 { 
+		width: 350px;
+		height: 350px;
+	}
+
+	.t-2 { 
+		width: 710px;
+		height: 350px;
+	}
+
+	.alpha {
+		margin: 0 0 10px 0;
+		height: 170px;
+	}
+
+	.omega {
+		margin: 0;
+		height: 170px;
+	}	
+}*/
+
+/* Medium (3 cols) */
+@media (min-width: 768px) and (max-width: 991px) {
 	.t-1 { 
 		width: 230px;
 		height: 230px;
@@ -181,10 +254,10 @@
 		margin: 0;
 		height: 110px;
 	}	
-}*/
+}
 
-/* 4 Tiles */
-@media (min-width: 768px) and (max-width: 991px) {
+/* Small (4 cols) */
+/*@media (min-width: 768px) and (max-width: 991px) {
 	.t-1 { 
 		width: 170px;
 		height: 170px;
@@ -204,12 +277,35 @@
 		margin: 0;
 		height: 80px;
 	}	
-}
+}*/
 
 /*===================================================================*/
 /* Medium devices (desktops) 940px Container */
 /*===================================================================*/
-/* 4 Tiles */
+/* Large (3 cols) */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.t-1 { 
+		width: 303px;
+		height: 303px;
+	}
+
+	.t-2 { 
+		width: 616px;
+		height: 303px;
+	}
+
+	.alpha {
+		margin: 0 0 10px 0;
+		height: 147px;
+	}
+
+	.omega {
+		margin: 0;
+		height: 145px;
+	}	
+}
+
+/* Medium (4 cols) */
 /*@media (min-width: 992px) and (max-width: 1199px) {
 	.t-1 { 
 		width: 225px;
@@ -232,8 +328,8 @@
 	}	
 }*/
 
-/* 5 Tiles */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* Small (5 cols) */
+/*@media (min-width: 992px) and (max-width: 1199px) {
 	.t-1 { 
 		width: 178px;
 		height: 178px;
@@ -253,9 +349,9 @@
 		margin: 0;
 		height: 84px;
 	}
-}
+}*/
 
-/* 6 Tiles */
+/* Extra Small (6 cols) */
 /*@media (min-width: 992px) and (max-width: 1199px) {
 	.t-1 { 
 		width: 146px;
@@ -282,7 +378,30 @@
 /*===================================================================*/
 /* Large devices (large desktops) 1140px Container */
 /*===================================================================*/
-/* 4 Tiles */
+/* Large (3 cols) */
+@media (min-width: 1200px) {
+	.t-1 { 
+		width: 370px;
+		height: 370px;
+	}
+
+	.t-2 { 
+		width: 750px;
+		height: 370px;
+	}
+
+	.alpha {
+		margin: 0 0 10px 0;
+		height: 180px;
+	}
+
+	.omega {
+		margin: 0;
+		height: 180px;
+	}
+}
+
+/* Medium (4 cols) */
 /*@media (min-width: 1200px) {
 	.t-1 { 
 		width: 275px;
@@ -305,8 +424,8 @@
 	}
 }*/
 
-/* 6 Tiles */
-@media (min-width: 1200px) {
+/* Small (6 cols) */
+/*@media (min-width: 1200px) {
 	.t-1 { 
 		width: 180px;
 		height: 180px;
@@ -326,9 +445,9 @@
 		margin: 0;
 		height: 85px;
 	}
-}
+}*/
 
-/* 8 Tiles */
+/* Extra Small (8 cols) */
 /*@media (min-width: 1200px) {
 	.t-1 { 
 		width: 132px;
