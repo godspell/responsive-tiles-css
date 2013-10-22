@@ -4,31 +4,40 @@ responsive-tiles-css
 pure css responsive tiles compatible with bootstrap
 
 
-Usage
-=====
+How it works
+------------
 
-Currently it is required to enable or disable styles in the ui.css stylesheet to set the sizes of the tiles as they scale. 
+Set the tile sizes from the container div.
+There are 4 sizes at which media queires will activate. To set
+these sizes you need to use the following class attributes on 
+the container div of the tiles.
+
+	Mobile
+	.tile-xm-size
+
+	Tablet
+	.tile-sm-size
+
+	Small Desktop
+	.tile-md-size
+
+	Large Desktop
+	.tile-lg-size
+
+To set the tile size for the different screen sizes the interface
+uses the second part of the class attribute (tile-xm-THIS PART).
+	
+	Sizes:
+		xm, sm, md, lg
 
 
 
-HTML
-====
+Example HTML
+------------
 
-	<div class="container">
+	<div class="container tile-xm-md tile-sm-md tile-md-lg tile-lg-sm">
 		<div class="tile t-1"></div>
 		<div class="tile t-1"></div>
 		...
 		<div class="tile t-1"></div>
 	</div>
-
-CSS
-===
-
-	tile:
-		margin and float control
-
-	t-x:
-		sizes the tile according to the x value.
-		Examples:
-		t-1 = 1x1 tile
-		t-2 = 2x1 tile
