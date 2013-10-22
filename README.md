@@ -25,7 +25,8 @@ the container div of the tiles.
 	.tile-lg-size
 
 To set the tile size for the different screen sizes the interface
-uses the second part of the class attribute (tile-xm-THIS PART).
+uses the second part of the class attribute 
+(tile-xm-THIS PART).
 	
 	Sizes:
 		xm, sm, md, lg
