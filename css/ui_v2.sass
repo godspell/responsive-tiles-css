@@ -1,0 +1,178 @@
+/*=============================================================
+ * Settings 
+ *=============================================================*/
+
+// all mobile styles
+$mobile-max: 767px
+
+// iphone4/5 vertical
+$sm-mobile-max: 479px
+
+// iphone4 horizontal
+$md-mobile-min: 480px
+$md-mobile-max: 567px
+
+// iphone5 horizontal
+$lg-mobile-min: 568px
+$lg-mobile-max: 767px
+
+$tablet-min: 768px
+$tablet-max: 991px
+
+$sm-desktop-min: 992px
+$sm-desktop-max: 1199px
+
+$lg-desktop-min: 1200px
+
+@mixin set-size($width, $height)
+	width: $width
+	height: $height
+
+/*	Calculates the height for half tiles.
+ *	If the height is odd, calculations are done so that the pixels
+ *	for the alpha and omega tile are not floating point numbers.
+ *	
+ *	In the case of the height being an odd number, the value of the 
+ *	height is reduced by 1 to make the number even. This offset is 
+ *	then added to the alpha(top tile) and taken from the omega
+ *	(bottom tile). 
+ */
+@mixin set-half-tiles($height, $margin)
+	@if ($height - $margin) % 2 != 0
+		.alpha
+			margin: 0 0 $margin 0
+			height: ($height - $margin - 1) / 2 + 1
+		.omega
+			margin: 0
+			height: ($height - $margin - 1) / 2 - 1
+	@else
+		.alpha
+			margin: 0 0 $margin 0
+			height: ($height - $margin) / 2
+		.omega
+			margin: 0
+			height: ($height - $margin) / 2
+
+/*	Shortcut for setting the styles of the tiles quickly. */
+@mixin set-tiles($width, $height, $margin)
+	.t-1
+		@include set-size($width, $height)
+	.t-2
+		@include set-size($width * 2 + $margin, $height)
+	@include set-half-tiles($height, $margin)
+
+
+
+/*=============================================================
+ * Default Styles 
+ *=============================================================*/
+
+.tile  
+	margin: 0 10px 10px 0
+	float: left
+
+.tile img
+	width: 100% 
+
+.alpha 
+	margin: 0 0 10px 0
+	height: 60px
+
+.omega 
+	margin: 0
+	height: 60px
+
+.effect:hover
+	-webkit-box-shadow: 0 0 40px #dedad8 
+	cursor: pointer 
+
+
+
+/*=============================================================
+ * Dynamic Styles 
+ *=============================================================*/
+
+
+/*--------------------------------------------*/
+/* Mobile 																		*/
+/*--------------------------------------------*/
+// General
+@media (max-width: $mobile-max)
+	.tile
+		float: none
+		margin: 0 auto 10px auto
+
+// iphone vertical
+@media (max-width: $sm-mobile-max)
+	.tile-xm-xm
+		@include set-tiles(280px, 280px, 10px)
+	.tile-xm-sm
+		@include set-tiles(280px, 280px, 10px)
+	.tile-xm-md
+		@include set-tiles(280px, 280px, 10px)
+	.tile-xm-lg
+		@include set-tiles(280px, 280px, 10px)
+
+// iphone4 horizontal
+@media (min-width: $md-mobile-min) and (max-width: $md-mobile-max)
+	.tile-xm-xm
+		@include set-tiles(320px, 320px, 10px)
+	.tile-xm-sm
+		@include set-tiles(320px, 320px, 10px)
+	.tile-xm-md
+		@include set-tiles(320px, 320px, 10px)
+	.tile-xm-lg
+		@include set-tiles(320px, 320px, 10px)
+
+// iphone5 horizontal
+@media (min-width: $lg-mobile-min) and (max-width: $lg-mobile-max)
+	.tile-xm-xm
+		@include set-tiles(320px, 320px, 10px)
+	.tile-xm-sm
+		@include set-tiles(320px, 320px, 10px)
+	.tile-xm-md
+		@include set-tiles(320px, 320px, 10px)
+	.tile-xm-lg
+		@include set-tiles(320px, 320px, 10px)
+
+
+/*--------------------------------------------*/
+/* Tablet 																		*/
+/*--------------------------------------------*/
+@media (min-width: $tablet-min) and (max-width: $tablet-max)
+	.tile-sm-xm
+		@include set-tiles(170px, 170px, 10px)
+	.tile-sm-sm
+		@include set-tiles(170px, 170px, 10px)
+	.tile-sm-md
+		@include set-tiles(230px, 230px, 10px)
+	.tile-sm-lg
+		@include set-tiles(350px, 350px, 10px)
+
+
+/*--------------------------------------------*/
+/* Small Desktop 															*/
+/*--------------------------------------------*/
+@media (min-width: $sm-desktop-min) and (max-width: $sm-desktop-max)
+	.tile-md-xm
+		@include set-tiles(146px, 146px, 10px)
+	.tile-md-sm
+		@include set-tiles(178px, 178px, 10px)
+	.tile-md-md
+		@include set-tiles(225px, 225px, 10px)
+	.tile-md-lg
+		@include set-tiles(303px, 303px, 10px)
+
+
+/*--------------------------------------------*/
+/* Large Desktop 															*/
+/*--------------------------------------------*/
+@media (min-width: $lg-desktop-min)
+	.tile-lg-xm
+		@include set-tiles(132px, 132px, 10px)
+	.tile-lg-sm
+		@include set-tiles(180px, 180px, 10px)
+	.tile-lg-md
+		@include set-tiles(275px, 275px, 10px)
+	.tile-lg-lg
+		@include set-tiles(370px, 370px, 10px)

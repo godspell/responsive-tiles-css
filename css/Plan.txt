@@ -1,0 +1,42 @@
+Plan...
+
+html structure
+	case
+		tile
+		tile
+		...
+		tile
+	end
+
+
+
+
+css structure
+	Screen Sizes
+
+		mobile (<768)
+			css name: xm
+			position: fixed center
+			sizes: sm md lg
+
+		tablets (≥768px)
+			css name: sm
+			position: float left
+			sizes: xm sm md lg 
+
+		small desktop (≥992px)
+			css name: md
+			position: float left
+			sizes: xm sm md lg  
+
+		large desktop (≥1200px)
+			css name: lg
+			position: float left
+			sizes: xm sm md lg
+
+
+	Example Css Case Syle:
+
+	<div class="case tile-xm-? tile-sm-? tile-md-? tile-lg-?">
+		...
+	</div>

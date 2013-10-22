@@ -1,0 +1,366 @@
+/*=============================================================
+ * Settings 
+ *============================================================= */
+/*	Calculates the height for half tiles.
+ *	If the height is odd, calculations are done so that the pixels
+ *	for the alpha and omega tile are not floating point numbers.
+ *	
+ *	In the case of the height being an odd number, the value of the 
+ *	height is reduced by 1 to make the number even. This offset is 
+ *	then added to the alpha(top tile) and taken from the omega
+ *	(bottom tile). 
+ */
+/*	Shortcut for setting the styles of the tiles quickly. */
+/*=============================================================
+ * Default Styles 
+ *============================================================= */
+.tile {
+  margin: 0 10px 10px 0;
+  float: left; }
+
+.tile img {
+  width: 100%; }
+
+.alpha {
+  margin: 0 0 10px 0;
+  height: 60px; }
+
+.omega {
+  margin: 0;
+  height: 60px; }
+
+.effect:hover {
+  -webkit-box-shadow: 0 0 40px #dedad8;
+  cursor: pointer; }
+
+/*=============================================================
+ * Dynamic Styles 
+ *============================================================= */
+/*-------------------------------------------- */
+/* Mobile 																		 */
+/*-------------------------------------------- */
+@media (max-width: 767px) {
+  .tile {
+    float: none;
+    margin: 0 auto 10px auto; } }
+@media (max-width: 479px) {
+  .tile-xm-xm .t-1 {
+    width: 280px;
+    height: 280px; }
+  .tile-xm-xm .t-2 {
+    width: 570px;
+    height: 280px; }
+  .tile-xm-xm .alpha {
+    margin: 0 0 10px 0;
+    height: 135px; }
+  .tile-xm-xm .omega {
+    margin: 0;
+    height: 135px; }
+
+  .tile-xm-sm .t-1 {
+    width: 280px;
+    height: 280px; }
+  .tile-xm-sm .t-2 {
+    width: 570px;
+    height: 280px; }
+  .tile-xm-sm .alpha {
+    margin: 0 0 10px 0;
+    height: 135px; }
+  .tile-xm-sm .omega {
+    margin: 0;
+    height: 135px; }
+
+  .tile-xm-md .t-1 {
+    width: 280px;
+    height: 280px; }
+  .tile-xm-md .t-2 {
+    width: 570px;
+    height: 280px; }
+  .tile-xm-md .alpha {
+    margin: 0 0 10px 0;
+    height: 135px; }
+  .tile-xm-md .omega {
+    margin: 0;
+    height: 135px; }
+
+  .tile-xm-lg .t-1 {
+    width: 280px;
+    height: 280px; }
+  .tile-xm-lg .t-2 {
+    width: 570px;
+    height: 280px; }
+  .tile-xm-lg .alpha {
+    margin: 0 0 10px 0;
+    height: 135px; }
+  .tile-xm-lg .omega {
+    margin: 0;
+    height: 135px; } }
+@media (min-width: 480px) and (max-width: 567px) {
+  .tile-xm-xm .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-xm .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-xm .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-xm .omega {
+    margin: 0;
+    height: 155px; }
+
+  .tile-xm-sm .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-sm .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-sm .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-sm .omega {
+    margin: 0;
+    height: 155px; }
+
+  .tile-xm-md .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-md .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-md .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-md .omega {
+    margin: 0;
+    height: 155px; }
+
+  .tile-xm-lg .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-lg .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-lg .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-lg .omega {
+    margin: 0;
+    height: 155px; } }
+@media (min-width: 568px) and (max-width: 767px) {
+  .tile-xm-xm .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-xm .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-xm .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-xm .omega {
+    margin: 0;
+    height: 155px; }
+
+  .tile-xm-sm .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-sm .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-sm .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-sm .omega {
+    margin: 0;
+    height: 155px; }
+
+  .tile-xm-md .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-md .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-md .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-md .omega {
+    margin: 0;
+    height: 155px; }
+
+  .tile-xm-lg .t-1 {
+    width: 320px;
+    height: 320px; }
+  .tile-xm-lg .t-2 {
+    width: 650px;
+    height: 320px; }
+  .tile-xm-lg .alpha {
+    margin: 0 0 10px 0;
+    height: 155px; }
+  .tile-xm-lg .omega {
+    margin: 0;
+    height: 155px; } }
+/*-------------------------------------------- */
+/* Tablet 																		 */
+/*-------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .tile-sm-xm .t-1 {
+    width: 170px;
+    height: 170px; }
+  .tile-sm-xm .t-2 {
+    width: 350px;
+    height: 170px; }
+  .tile-sm-xm .alpha {
+    margin: 0 0 10px 0;
+    height: 80px; }
+  .tile-sm-xm .omega {
+    margin: 0;
+    height: 80px; }
+
+  .tile-sm-sm .t-1 {
+    width: 170px;
+    height: 170px; }
+  .tile-sm-sm .t-2 {
+    width: 350px;
+    height: 170px; }
+  .tile-sm-sm .alpha {
+    margin: 0 0 10px 0;
+    height: 80px; }
+  .tile-sm-sm .omega {
+    margin: 0;
+    height: 80px; }
+
+  .tile-sm-md .t-1 {
+    width: 230px;
+    height: 230px; }
+  .tile-sm-md .t-2 {
+    width: 470px;
+    height: 230px; }
+  .tile-sm-md .alpha {
+    margin: 0 0 10px 0;
+    height: 110px; }
+  .tile-sm-md .omega {
+    margin: 0;
+    height: 110px; }
+
+  .tile-sm-lg .t-1 {
+    width: 350px;
+    height: 350px; }
+  .tile-sm-lg .t-2 {
+    width: 710px;
+    height: 350px; }
+  .tile-sm-lg .alpha {
+    margin: 0 0 10px 0;
+    height: 170px; }
+  .tile-sm-lg .omega {
+    margin: 0;
+    height: 170px; } }
+/*-------------------------------------------- */
+/* Small Desktop 															 */
+/*-------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .tile-md-xm .t-1 {
+    width: 146px;
+    height: 146px; }
+  .tile-md-xm .t-2 {
+    width: 302px;
+    height: 146px; }
+  .tile-md-xm .alpha {
+    margin: 0 0 10px 0;
+    height: 68px; }
+  .tile-md-xm .omega {
+    margin: 0;
+    height: 68px; }
+
+  .tile-md-sm .t-1 {
+    width: 178px;
+    height: 178px; }
+  .tile-md-sm .t-2 {
+    width: 366px;
+    height: 178px; }
+  .tile-md-sm .alpha {
+    margin: 0 0 10px 0;
+    height: 84px; }
+  .tile-md-sm .omega {
+    margin: 0;
+    height: 84px; }
+
+  .tile-md-md .t-1 {
+    width: 225px;
+    height: 225px; }
+  .tile-md-md .t-2 {
+    width: 460px;
+    height: 225px; }
+  .tile-md-md .alpha {
+    margin: 0 0 10px 0;
+    height: 108px; }
+  .tile-md-md .omega {
+    margin: 0;
+    height: 106px; }
+
+  .tile-md-lg .t-1 {
+    width: 303px;
+    height: 303px; }
+  .tile-md-lg .t-2 {
+    width: 616px;
+    height: 303px; }
+  .tile-md-lg .alpha {
+    margin: 0 0 10px 0;
+    height: 147px; }
+  .tile-md-lg .omega {
+    margin: 0;
+    height: 145px; } }
+/*-------------------------------------------- */
+/* Large Desktop 															 */
+/*-------------------------------------------- */
+@media (min-width: 1200px) {
+  .tile-lg-xm .t-1 {
+    width: 132px;
+    height: 132px; }
+  .tile-lg-xm .t-2 {
+    width: 274px;
+    height: 132px; }
+  .tile-lg-xm .alpha {
+    margin: 0 0 10px 0;
+    height: 61px; }
+  .tile-lg-xm .omega {
+    margin: 0;
+    height: 61px; }
+
+  .tile-lg-sm .t-1 {
+    width: 180px;
+    height: 180px; }
+  .tile-lg-sm .t-2 {
+    width: 370px;
+    height: 180px; }
+  .tile-lg-sm .alpha {
+    margin: 0 0 10px 0;
+    height: 85px; }
+  .tile-lg-sm .omega {
+    margin: 0;
+    height: 85px; }
+
+  .tile-lg-md .t-1 {
+    width: 275px;
+    height: 275px; }
+  .tile-lg-md .t-2 {
+    width: 560px;
+    height: 275px; }
+  .tile-lg-md .alpha {
+    margin: 0 0 10px 0;
+    height: 133px; }
+  .tile-lg-md .omega {
+    margin: 0;
+    height: 131px; }
+
+  .tile-lg-lg .t-1 {
+    width: 370px;
+    height: 370px; }
+  .tile-lg-lg .t-2 {
+    width: 750px;
+    height: 370px; }
+  .tile-lg-lg .alpha {
+    margin: 0 0 10px 0;
+    height: 180px; }
+  .tile-lg-lg .omega {
+    margin: 0;
+    height: 180px; } }
