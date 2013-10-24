@@ -146,12 +146,7 @@
 
 .effect-3 .back { left: -100%; }
 
-.effect-3:hover .back {
-  -webkit-transition: 400ms;
-  -moz-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms;
-  left: 0; }
+.effect-3:hover .back { left: 0; }
 
 .effect-3:hover .front { left: 100%; }
 
@@ -172,12 +167,7 @@
 
 .effect-4 .back { right: -100%; }
 
-.effect-4:hover .back {
-  -webkit-transition: 400ms;
-  -moz-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms;
-  right: 0; }
+.effect-4:hover .back { right: 0; }
 
 .effect-4:hover .front { right: 100%; }
 
@@ -199,12 +189,7 @@
 .effect-5 .back { bottom: -100%; }
 .alpha .effect-6 .back, .omega .effect-6 .back { bottom: -103%; }
 
-.effect-5:hover .back {
-  -webkit-transition: 400ms;
-  -moz-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms;
-  bottom: 0; }
+.effect-5:hover .back { bottom: 0; }
 
 .effect-5:hover .front { bottom: 100%; }
 
@@ -228,12 +213,7 @@
 
 .alpha .effect-6 .back, .omega .effect-6 .back { top: -103%; }
 
-.effect-6:hover .back {
-  -webkit-transition: 400ms;
-  -moz-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms;
-  top: 0; }
+.effect-6:hover .back { top: 0; }
 
 .effect-6:hover .front { top: 100%; }
 
